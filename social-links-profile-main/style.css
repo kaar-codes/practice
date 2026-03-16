@@ -1,12 +1,37 @@
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
 body {
   color: hsl(0, 0%, 100%);
   background-color: hsl(0, 0%, 8%);
 }
 
 section {
-  padding: 36px;
+  padding: 24px;
   text-align: center;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: hsl(0, 0%, 12%);
+  margin-top: calc(calc(100vh - 680px) / 2);
+}
+
+/* To make the changes in the Screen View [Browser] view */
+@media screen and (max-width: 375px) {
+  section {
+    padding: 16px;
+  }
+}
+
+header {
+  margin-bottom: 26px;
 }
 
 a {
@@ -18,6 +43,18 @@ a {
   padding: 16px;
 }
 
+header h1,
+p {
+  margin: 12px;
+}
+
+.profile-location {
+  color: hsl(75, 94%, 57%);
+  font-weight: 600;
+}
+
 img {
+  max-width: 96px;
   border-radius: 100%;
+  margin-bottom: 24px;
 }
