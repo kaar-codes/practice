@@ -1,0 +1,23 @@
+body {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 8%);
+}
+
+section {
+  padding: 36px;
+  text-align: center;
+  background-color: hsl(0, 0%, 12%);
+}
+
+a {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 20%);
+  text-decoration: none;
+  display: block;
+  margin-block: 16px;
+  padding: 16px;
+}
+
+img {
+  border-radius: 100%;
+}
