@@ -5,3 +5,6 @@ pnpm
 *.logs
 *.env
 *.prettierrc
+
+designs
+design
