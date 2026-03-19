@@ -1,0 +1,11 @@
+.card {
+  background-color: var(--white);
+  width: 384px;
+  padding: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-illustration {
+  width: 100%;
+}
