@@ -4,8 +4,76 @@
   padding: 24px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 20px;
+  box-sizing: border-box;
 }
 
 .card-illustration {
   width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+main {
+  margin: 24px 0;
+}
+
+/* ------ REFERENCE
+100: Thin (Hairline)
+200: Extra Light (Ultra Light)
+300: Light
+400: Normal (Regular)
+500: Medium
+600: Semi Bold (Demi Bold)
+700: Bold
+800: Extra Bold (Ultra Bold)
+900: Black (Heavy)
+ */
+
+.tag-line {
+  letter-spacing: 0;
+  background-color: var(--yellow);
+  font-size: 14px;
+  font-weight: 800;
+  padding: 4px 12px;
+  text-transform: capitalize;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.details {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: capitalize;
+  margin: 12px 0;
+}
+
+.base-heading {
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 0;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+.content {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--grey-500);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.profile-image {
+  width: 32px;
+}
+
+.profile-name {
+  display: inline-block;
+  letter-spacing: 0px;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 800;
+  margin: 0;
 }
