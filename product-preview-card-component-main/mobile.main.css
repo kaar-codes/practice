@@ -1,0 +1,10 @@
+@media (max-width: 55em) {
+  .product-container {
+    max-width: 360px;
+    flex-direction: column;
+  }
+
+  .product-details {
+    gap: 16px;
+  }
+}

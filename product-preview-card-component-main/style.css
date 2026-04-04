@@ -1,0 +1,57 @@
+@import url("./main.css");
+@import url("./mobile.main.css");
+
+@font-face {
+  font-display: swap;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/fraunces-v38-latin-700.woff2") format("woff2");
+}
+
+/* montserrat-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/montserrat-v31-latin-500.woff2") format("woff2");
+}
+
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montserrat-v31-latin-700.woff2") format("woff2");
+}
+
+* {
+  margin: unset;
+  padding: unset;
+  box-sizing: border-box;
+}
+
+:root {
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--cream);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
