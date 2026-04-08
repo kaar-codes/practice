@@ -1,4 +1,6 @@
 @import "./main.css";
+@import "./active.css";
+@import "./mobile.main.css";
 
 /* outfit-300 - latin */
 @font-face {
@@ -8,6 +10,7 @@
   font-weight: 300;
   src: url("../fonts/outfit-v15-latin-300.woff2") format("woff2");
 }
+
 /* outfit-regular - latin */
 @font-face {
   font-display: swap;
@@ -16,6 +19,7 @@
   font-weight: 400;
   src: url("../fonts/outfit-v15-latin-regular.woff2") format("woff2");
 }
+
 /* outfit-600 - latin */
 @font-face {
   font-display: swap;
@@ -34,11 +38,11 @@
 :root {
   --blue: hsl(215, 51%, 70%);
   --cyan: hsl(178, 100%, 50%);
-
   --main-bg: hsl(217, 54%, 11%);
   --card-bg: hsl(216, 50%, 16%);
   --line: hsl(215, 32%, 27%);
   --white: hsl(0, 0%, 100%);
+  --shadow: hsl(0, 0, 0);
 }
 
 html {
@@ -51,4 +55,5 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-color: var(--main-bg);
 }

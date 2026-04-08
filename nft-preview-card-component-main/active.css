@@ -1,0 +1,40 @@
+.illustration-container {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.illustration-container::before {
+  content: url("./images/icon-view.svg");
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.illustration-container::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cyan);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.illustration-container::after,
+.illustration-container::before {
+  transition: opacity 0.33s ease-in-out;
+}
+
+.illustration-container:hover::after {
+  opacity: 40%;
+}
+
+.illustration-container:hover::before {
+  opacity: 1;
+}

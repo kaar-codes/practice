@@ -1,0 +1,61 @@
+.main-container {
+  max-width: 360px;
+  background-color: var(--card-bg);
+  color: var(--blue);
+  padding: 1em;
+  font-size: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  border-radius: 14px;
+  box-shadow: 0 0 36px var(--shadow);
+}
+
+img.illustration {
+  display: block;
+  width: 100%;
+}
+
+.text-heading {
+  font-size: 1.44em;
+}
+
+.text-heading,
+.highlight {
+  color: var(--white);
+  text-transform: capitalize;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 3px solid var(--line);
+  line-height: 1.5;
+}
+
+.stats-container,
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin-block: 0.6em;
+}
+
+.stats-eth {
+  color: var(--cyan);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+}
+
+img.profile-image {
+  width: 32px;
+  aspect-ratio: 1;
+}
