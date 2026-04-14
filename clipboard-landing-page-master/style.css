@@ -1,0 +1,37 @@
+@import "main.css";
+@import "mobile.main.css";
+
+/* bai-jamjuree-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Bai Jamjuree";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/bai-jamjuree-v13-latin-regular.woff2") format("woff2");
+}
+/* bai-jamjuree-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Bai Jamjuree";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/bai-jamjuree-v13-latin-600.woff2") format("woff2");
+}
+
+:root {
+  --green500: hsl(171, 66%, 44%);
+  --blue100: hsl(233, 100%, 69%);
+  --gray700: hsl(210, 10%, 33%);
+  --gray500: hsl(201, 11%, 66%);
+}
+
+* {
+  margin: unset;
+  padding: unset;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Bai Jamjuree", sans-serif;
+}

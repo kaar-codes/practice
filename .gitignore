@@ -6,5 +6,5 @@ pnpm
 *.env
 *.prettierrc
 
-designs
 design
+designs
