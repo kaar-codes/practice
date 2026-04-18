@@ -1,0 +1,45 @@
+@media (max-width: 1250px) {
+  #root {
+    gap: 2em;
+  }
+
+  #hero_section .logo {
+    max-width: 58px;
+  }
+
+  #highlight_section {
+    align-self: center;
+  }
+  .highlight-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .img.highlight-illustration {
+    flex-basis: auto;
+  }
+  #clients_section,
+  .features-container,
+  footer,
+  .important-links {
+    flex-direction: column;
+    text-align: center;
+  }
+  #highlight_section,
+  #mockup_section {
+    align-self: center;
+  }
+
+  .control-buttons {
+    flex-direction: column;
+    gap: unset;
+  }
+
+  .control-buttons > .cta-button {
+    margin-block: 10px;
+  }
+
+  section {
+    padding: 3em;
+  }
+}

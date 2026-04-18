@@ -1,0 +1,199 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6.5em;
+  background-image: url("./images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+}
+
+/* GENERAL CSS */
+.container {
+  max-width: 576px;
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.base-heading,
+.sub-base-heading,
+.sub-base-heading-3 {
+  color: var(--gray700);
+  margin-block: 0.5em;
+}
+
+/* HERO SECTION */
+#hero_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10em;
+  gap: 3em;
+}
+
+#hero_section .logo {
+  max-width: 160px;
+}
+.base-heading {
+  font-size: 2.15em;
+}
+
+.sub-base-heading {
+  font-size: 2em;
+}
+
+.sub-base-heading-3 {
+  font-size: 1.4em;
+}
+
+.description {
+  color: var(--gray500);
+  line-height: 1.5em;
+}
+
+.control-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.control-buttons > .cta-button {
+  all: unset;
+  display: block;
+  padding: 1em 2em;
+  color: white;
+  background-color: black;
+  margin-block: 1.33em;
+  border-radius: 1000px;
+  font-weight: 600;
+}
+
+.control-buttons > #cta_download_ios {
+  background-color: var(--green500);
+}
+
+.control-buttons > #cta_download_mac {
+  background-color: var(--blue100);
+}
+
+#highlight_section,
+#mockup_section,
+#feature_section,
+#clients_section,
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6em;
+}
+
+/* HIGHLIGHT SECTION */
+#highlight_section {
+  align-self: stretch;
+}
+
+#highlight_section > .container {
+  align-self: center;
+}
+
+.highlight-container {
+  display: flex;
+  gap: 8em;
+  align-items: center;
+}
+
+img.highlight-illustration {
+  display: block;
+  flex-basis: 50%;
+}
+
+.highlight-list {
+  list-style-type: none;
+  line-height: 1.5;
+  flex-basis: 360px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.highlight {
+  margin-block: 2em;
+}
+
+/* MOCKUP SECTION */
+#mockup_section {
+  /* MAKING IT CENTER OVER THE ROOT ELEMENT */
+  align-self: center;
+
+  /* CENTER ITEMS INSIDE THE MOCKUP */
+  align-items: center;
+}
+
+/* FEATURES SECTION */
+#feature_section {
+  align-self: stretch;
+  align-items: center;
+  gap: 5em;
+}
+.features-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-self: stretch;
+  justify-content: space-evenly;
+  gap: 3em;
+}
+
+.feature {
+  max-width: 360px;
+}
+
+.feature-ico {
+  max-width: 52px;
+  display: inline;
+  text-align: center;
+}
+
+#clients_section {
+  flex-direction: row;
+  align-items: center;
+}
+
+footer {
+  /* background-color: var(--gray500); */
+  flex-direction: row;
+  align-self: stretch;
+  align-items: center;
+  padding: 3em;
+}
+
+footer .important-links {
+  display: flex;
+  flex-grow: 1;
+  gap: 3em;
+}
+
+footer > img {
+  width: 48px;
+}
+
+.important-links ul {
+  list-style-type: none;
+}
+
+.important-links ul > li {
+  line-height: 2;
+  text-transform: capitalize;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
