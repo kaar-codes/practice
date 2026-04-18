@@ -1,0 +1,16 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HEADER SECTION */
+.main-container header {
+  max-width: 520px;
+  text-align: center;
+}
+.card-container {
+  display: flex;
+  gap: 2em;
+}

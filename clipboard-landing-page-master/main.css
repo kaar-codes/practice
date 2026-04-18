@@ -5,6 +5,7 @@
   gap: 6.5em;
   background-image: url("./images/bg-header-desktop.png");
   background-repeat: no-repeat;
+  background-size: 100vw auto;
 }
 
 /* GENERAL CSS */
@@ -166,7 +167,7 @@ img.highlight-illustration {
 }
 
 footer {
-  /* background-color: var(--gray500); */
+  background-color: var(--gray500a);
   flex-direction: row;
   align-self: stretch;
   align-items: center;
