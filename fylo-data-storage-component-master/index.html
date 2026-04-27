@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="main_card" class="main-card">
+        <img src="./images/logo.svg" alt="fylo logo" />
+        <div class="menus">
+          <div class="menu">
+            <img src="./images/icon-document.svg" alt="document menu" />
+          </div>
+          <div class="menu">
+            <img src="./images/icon-folder.svg" alt="folder menu" />
+          </div>
+          <div class="menu">
+            <img src="./images/icon-upload.svg" alt="upload icon" />
+          </div>
+        </div>
+      </div>
+
+      <div id="stats_card" class="stats-card">
+        <summary>
+          You've used <span class="highlight">815 gb</span> of your storage
+        </summary>
+        <div class="allocated">
+          <input
+            type="range"
+            name="range-consumed"
+            min="0"
+            max="100"
+            value="100"
+            id="range_consumed"
+            class="range-consumed"
+          />
+          <div class="range-values">
+            <p>0 gb</p>
+            <p>1000 gb</p>
+          </div>
+        </div>
+
+        <div class="remaining">
+          <div class="highlight-popup">185</div>
+          <div>gb left</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

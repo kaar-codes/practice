@@ -1,0 +1,124 @@
+#root {
+  min-width: 960px;
+  display: flex;
+  gap: 3em;
+  align-items: end;
+}
+
+/* MAIN CARD */
+.main-card {
+  background-color: var(--blue850);
+  padding: 2em;
+  border-radius: 10px;
+  border-top-right-radius: 3.5em;
+  flex-grow: 1;
+}
+
+.menus {
+  margin-block-start: 2em;
+  display: flex;
+  gap: 14px;
+}
+
+.menu {
+  background-color: var(--blue950);
+  padding: 12px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* STATS CARD */
+.stats-card {
+  position: relative;
+  flex-grow: 2;
+  background-color: var(--blue850);
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.highlight {
+  color: var(--blue200);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.remaining {
+  background-color: var(--blue200);
+  text-transform: uppercase;
+  position: absolute;
+  top: -50px;
+  right: 2em;
+  padding: 1em;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  gap: 1em;
+  font-size: 12px;
+}
+
+.remaining::after {
+  content: "";
+  display: block;
+  border-bottom: 30px solid transparent;
+  border-left: 50px solid transparent;
+  border-top: 30px solid var(--blue200);
+  position: absolute;
+  right: 0;
+  top: 90%;
+}
+
+.highlight-popup {
+  color: var(--blue950);
+  font-weight: 700;
+  font-size: 4em;
+}
+
+.range-consumed {
+  all: unset;
+  border-radius: 100em;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: var(--blue950);
+  overflow: hidden;
+  padding: 2px;
+  margin-block-start: 1em;
+  margin-block-end: 10px;
+}
+
+.range-consumed::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 8px;
+  aspect-ratio: 1;
+  background-color: var(--blue200);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.range-consumed::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%) 0%,
+    hsl(335, 100%, 65%) 100%
+  );
+  max-width: 80%;
+  border-radius: 100em;
+  padding: 1.5px;
+}
+
+.range-values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--blue200);
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
