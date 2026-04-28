@@ -1,0 +1,34 @@
+@media (max-width: 1080px) {
+  #root {
+    min-width: 540px;
+    padding: 2.4em;
+    flex-wrap: wrap;
+    align-items: end;
+  }
+
+  .remaining {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    background-size: cover;
+    background-position-y: center;
+    background-image: url("./images/bg-mobile.png");
+  }
+  #root {
+    min-width: 310px;
+  }
+
+  .remaining {
+    top: unset;
+    right: 50%;
+    bottom: 0;
+    transform: translateY(50%) translateX(50%);
+  }
+
+  .remaining::after {
+    display: none;
+  }
+}

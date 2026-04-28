@@ -1,7 +1,16 @@
+body {
+  /* backgroundEffect */
+  background-color: var(--blue950);
+  background-image: url("./images/bg-desktop.png");
+  background-size: 100% 50vh;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+}
+
 #root {
-  min-width: 960px;
+  min-width: 840px;
   display: flex;
-  gap: 3em;
+  gap: 2em;
   align-items: end;
 }
 
