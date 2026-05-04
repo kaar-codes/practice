@@ -1,0 +1,35 @@
+@import "card.css";
+
+#root {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2em 2.5em;
+}
+
+.card {
+  background-color: hsl(263, 55%, 52%);
+  color: white;
+  padding: 2em;
+  position: relative;
+  border-radius: 16px;
+}
+
+.card > img {
+  min-width: 150px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-100%);
+}
+
+.card > h1 {
+  position: relative;
+  z-index: 2;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-block-end: 1.5rem;
+}
