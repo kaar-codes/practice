@@ -43,3 +43,12 @@ html {
   font-size: 18px;
   font-family: "Public Sans", sans-serif;
 }
+
+body {
+  overflow-x: hidden;
+}
+
+nav,
+section {
+  padding-inline: 12rem;
+}

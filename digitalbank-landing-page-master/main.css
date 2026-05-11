@@ -5,8 +5,9 @@
 /* NAVIGATION TOP SECTION */
 nav {
   position: relative;
-  z-index: 1000;
   background-color: var(--white);
+  z-index: 1000;
+  padding: 1em 4rem;
 }
 
 .flex-center-between {
@@ -26,20 +27,22 @@ nav {
   background-image: linear-gradient(30deg, var(--cyan400), var(--green500));
   border-radius: 10em;
   padding-inline: 2rem;
-  padding-block: 1rem;
+  line-height: 2.5;
 }
 
+/* HERO SECTION */
 #hero_section {
-  padding-block: 10rem 20rem;
-  background-size: 70vw;
-  background-repeat: no-repeat;
-  background-position-x: 150%;
-  background-position-y: -300px;
+  background-color: red;
   background-image: url("./images/bg-intro-desktop.svg");
-  position: relative;
+  background-repeat: no-repeat;
+  background-size: 968px;
+  background-position: right top;
+  background-position-x: calc(45vw + 200px);
 }
 
-#hero_section img.mockup {
-  position: absolute;
-  right: -150px;
+#hero_section .intro-mockup {
+  display: block;
+  position: relative;
+  top: -45px;
+  left: calc(100vw / 6);
 }
