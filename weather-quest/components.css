@@ -1,0 +1,63 @@
+.option-labels {
+  font-family: "Jetbrains Mono";
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  background-color: var(--home-primary);
+  border: 2px solid var(--home-primary);
+  z-index: 0;
+}
+
+/* Label above the input field */
+.option-label-txt {
+  cursor: pointer;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 2;
+}
+
+/* Active Option shown in the System */
+.active-option-label-left::before,
+.active-option-label-right::before {
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  color: var(--home-primary);
+  background-color: var(--home-neutral);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.active-option-label-left::before {
+  left: 0;
+}
+.active-option-label-right::before {
+  right: 0;
+}
+
+/* Weekly Toggler Component */
+.switch-container {
+  margin-inline: auto;
+  width: var(--switch-sz);
+  border: 1px solid var(--border-gray);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 100px;
+}
+
+.switch-container .circle {
+  width: var(--circle-sz);
+  aspect-ratio: 1;
+  border: 1px solid var(--home-card-bg);
+  border-radius: 100px;
+  background-color: var(--white);
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+.switch-container .active-circle {
+  transform: translateX(calc(var(--switch-container-sz) - var(--circle-sz)));
+}

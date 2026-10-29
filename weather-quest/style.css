@@ -1,0 +1,108 @@
+@import url("./components.css");
+
+/* jetbrains-mono-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./public/fonts/jetbrains-mono-v24-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* jetbrains-mono-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./public/fonts/jetbrains-mono-v24-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./public/fonts/inter-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./public/fonts/inter-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./public/fonts/inter-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./public/fonts/inter-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+*,
+*::after,
+*::before {
+  margin: unset;
+  padding: unset;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-family: Inter, sans-serif;
+}
+
+:root {
+  --home-primary: #38bdf8;
+  --home-secondary: #1e293b;
+  --home-tertiary: #94a3b8;
+  --home-neutral: #0f172a;
+  --home-card-bg: #131b2e;
+
+  --border-gray: #414757;
+
+  /* Container */
+  --container-sz: 600px;
+  --body-bg: #0b1326;
+
+  /* General Colors */
+  --white: #fff;
+
+  --switch-sz: 44px;
+  --circle-sz: 20px;
+  --switch-container-sz: calc(var(--switch-sz) - 2px);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: var(--body-bg);
+}
+
+#root {
+  color: var(--home-tertiary);
+  background: var(--home-card-bg);
+  border-radius: 12px;
+  padding: 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: var(--container-sz);
+  row-gap: 24px;
+}
+
+#root h1 {
+  font-size: 48px;
+}
