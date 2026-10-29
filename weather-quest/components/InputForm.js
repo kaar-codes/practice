@@ -1,5 +1,5 @@
 import { store } from "./index.js";
-import WeeklyToggler from "./weeklyToggler.js";
+import WeeklyToggler from "./WeeklyToggler.js";
 
 function InputForm() {
   const container = document.createElement("form");
