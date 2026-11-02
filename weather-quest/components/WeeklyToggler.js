@@ -1,19 +1,20 @@
+import { WeeklySwitch } from "./WeeklySwitch.js";
+
 function WeeklyToggler() {
   const container = document.createElement("div");
 
-  container.innerHTML = `
-    <div class="switch-container">
-        <div class="circle">
-        </div>
-    </div>
-    `;
+  const weekly = document.createElement("div");
 
-  // const circleEle = document.querySelector(".switch-container .circle");
-  container.addEventListener("click", function () {
-    const circle = document.querySelector(".circle");
-    circle.classList.toggle("active-circle");
-    console.log("DOM Load");
-  });
+  const weeklyCheckboxLabel = document.createElement("p");
+  weeklyCheckboxLabel.textContent = "Include Weekly Forecast";
+
+  weekly.append(weeklyCheckboxLabel, WeeklySwitch.call(this));
+
+  const submitBtn = document.createElement("button");
+  submitBtn.type = "submit";
+  submitBtn.innerText = "Get Weather";
+
+  container.append(weekly, submitBtn);
 
   return container;
 }

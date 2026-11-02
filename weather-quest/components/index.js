@@ -6,7 +6,10 @@ import Stats from "./Stats.js";
 const initialState = {
   option: "city name",
   labels: ["city name", "coordinates"],
-  state: {},
+  state: {
+    isWeekly: false,
+    body: {},
+  },
 };
 
 const store = new Proxy(initialState, {
@@ -23,19 +26,16 @@ function render(parent) {
   const inputForm = InputForm.bind(store);
   const stats = Stats.bind(store);
 
-  if (store.state.main && store.state.wind) {
-    parent.replaceChildren(
-      header.call(store),
-      toggler.call(),
-      inputForm.call(),
-      stats.call(),
-    );
+  const commonFields = [
+    header.call(store),
+    toggler.call(store),
+    inputForm.call(store),
+  ];
+
+  if (!store.state.body) {
+    parent.replaceChildren(...commonFields, stats.call());
   } else {
-    parent.replaceChildren(
-      header.call(store),
-      toggler.call(),
-      inputForm.call(),
-    );
+    parent.replaceChildren(...commonFields);
   }
 }
 
