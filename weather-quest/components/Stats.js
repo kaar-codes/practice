@@ -1,15 +1,12 @@
-import { store } from "./index.js";
-
 function Stats() {
   const container = document.createElement("div");
+  container.className = "stats-container";
 
   const sectionHeader = document.createElement("h2");
   sectionHeader.textContent = "atmospheric conditions";
   container.append(sectionHeader);
 
-  const { main, wind } = store.state;
-  const { humidity, pressure } = main;
-  const { speed } = wind;
+  const { humidity, pressure, speed } = this.state.body;
 
   const data = [
     { label: "humidity", value: `${humidity}%` },

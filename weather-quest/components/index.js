@@ -5,6 +5,7 @@ import Stats from "./Stats.js";
 
 const initialState = {
   option: "city name",
+  record: null,
   labels: ["city name", "coordinates"],
   state: {
     isWeekly: false,
@@ -20,23 +21,31 @@ const store = new Proxy(initialState, {
   },
 });
 
-function render(parent) {
+function render(parent = document.getElementById("root")) {
   const header = Header.bind(store);
   const toggler = Toggler.bind(store);
   const inputForm = InputForm.bind(store);
   const stats = Stats.bind(store);
 
-  const commonFields = [
+  const mainWrapper = document.createElement("div");
+  mainWrapper.className = "mainwrapper";
+  mainWrapper.append(
     header.call(store),
     toggler.call(store),
     inputForm.call(store),
-  ];
+  );
 
-  if (!store.state.body) {
-    parent.replaceChildren(...commonFields, stats.call());
-  } else {
-    parent.replaceChildren(...commonFields);
-  }
+  const resultWrapper = document.createElement("div");
+  resultWrapper.className = "resultWrapper";
+  resultWrapper.append(
+    toggler.call(store),
+    inputForm.call(store),
+    stats.call(store),
+  );
+
+  parent.replaceChildren(
+    Object.keys(store.state.body).length ? resultWrapper : mainWrapper,
+  );
 }
 
 export { store };

@@ -27,7 +27,7 @@ function InputForm() {
       this.option === "city name"
         ? `q=${inpForCity.value}`
         : `lat=${inpForLat.value}&lon=${inpForLon.value}`;
-    FetchWeatherData.call(this, query);
+    FetchWeatherData.bind(this, query)();
   });
 
   container.append(WeeklyToggler.call(this));
