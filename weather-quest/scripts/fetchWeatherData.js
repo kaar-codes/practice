@@ -4,7 +4,6 @@ export function FetchWeatherData(query) {
   fetch(uri)
     .then((res) => res.json())
     .then((resData) => {
-      console.log(resData);
       if (!t.state.isWeekly) {
         const {
           name,
@@ -52,7 +51,6 @@ export function FetchWeatherData(query) {
           const date = new Date(ms);
           const intlOpts = {
             day: "2-digit",
-            year: "numeric",
             month: "short",
             hour12: false,
           };
@@ -78,7 +76,6 @@ export function FetchWeatherData(query) {
           if (dts.size < 5) dts.add(localeDate);
         }
 
-        console.log(allData);
         // Pick the Unique data based on the date values
         for (const x of dts) {
           for (const [i, y] of Object.entries(dtsArr)) {
@@ -89,7 +86,6 @@ export function FetchWeatherData(query) {
           }
         }
 
-        console.log(records);
         const { date, pressure, speed, humidity, temp, icon } = records.at(
           t.record ?? 0,
         );
