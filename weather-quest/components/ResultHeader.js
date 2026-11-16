@@ -5,7 +5,10 @@ export function ResultHeader() {
   const city = document.createElement("h2");
   city.textContent = `${this.state.body.name}, ${this.state.body.country}`;
 
-  container.append(city);
+  const temp = document.createElement("h3");
+  temp.textContent = this.state.body.temp;
+
+  container.append(city, temp);
 
   return container;
 }

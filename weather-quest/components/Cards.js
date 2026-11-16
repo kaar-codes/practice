@@ -24,7 +24,7 @@ export default function Cards() {
           <div>
           <img src="../public/media/weather-${iconMap.get(arr.icon.slice(0, 2))}.svg" alt="${arr.name}"/>
           </div>
-          <strong>${arr.temp}</strong>
+          <strong>${arr.temp / 32}</strong>
           `;
       return card;
     });
