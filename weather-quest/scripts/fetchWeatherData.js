@@ -4,13 +4,14 @@ export function FetchWeatherData(query) {
   fetch(uri)
     .then((res) => res.json())
     .then((resData) => {
+      console.log(resData);
       if (!t.state.isWeekly) {
         const {
           name,
           sys: { country },
           coord: { lat, lon },
           wind: { speed },
-          main: { humidity, pressure },
+          main: { humidity, pressure, temp },
         } = resData;
         console.log(name, country, lat, lon, humidity, speed, pressure);
         t.state = structuredClone({
@@ -23,6 +24,7 @@ export function FetchWeatherData(query) {
             humidity,
             speed,
             pressure,
+            temp,
           }),
         });
       } else {
@@ -42,8 +44,8 @@ export function FetchWeatherData(query) {
 
         for (const {
           dt,
-          main: { pressure, humidity },
-          weather: { icon },
+          main: { pressure, humidity, temp },
+          weather: [{ icon }],
           wind: { speed },
         } of Object.values(list)) {
           const ms = dt * 1000;
@@ -63,12 +65,20 @@ export function FetchWeatherData(query) {
 
           dtsArr.push(localeDate);
 
-          allData.push({ date: localeDate, pressure, humidity, icon, speed });
+          allData.push({
+            date: localeDate,
+            pressure,
+            humidity,
+            icon,
+            speed,
+            temp,
+          });
 
           // Limit the Date ranges for 5 including the current date
           if (dts.size < 5) dts.add(localeDate);
         }
 
+        console.log(allData);
         // Pick the Unique data based on the date values
         for (const x of dts) {
           for (const [i, y] of Object.entries(dtsArr)) {
@@ -79,12 +89,16 @@ export function FetchWeatherData(query) {
           }
         }
 
-        const { pressure, speed, humidity } = records.at(t.record ?? 0);
+        console.log(records);
+        const { date, pressure, speed, humidity, temp, icon } = records.at(
+          t.record ?? 0,
+        );
 
         t.state = structuredClone({
           isWeekly: t.state.isWeekly,
           body: structuredClone({
             name,
+            date,
             country,
             lat,
             lon,
@@ -92,6 +106,8 @@ export function FetchWeatherData(query) {
             humidity,
             pressure,
             speed,
+            temp,
+            icon,
           }),
         });
       }

@@ -2,6 +2,7 @@ import Toggler from "./Toggler.js";
 import InputForm from "./InputForm.js";
 import Header from "./Header.js";
 import Stats from "./Stats.js";
+import Cards from "./Cards.js";
 
 const initialState = {
   option: "city name",
@@ -26,6 +27,7 @@ function render(parent = document.getElementById("root")) {
   const toggler = Toggler.bind(store);
   const inputForm = InputForm.bind(store);
   const stats = Stats.bind(store);
+  const cards = Cards.bind(store);
 
   const mainWrapper = document.createElement("div");
   mainWrapper.className = "mainwrapper";
@@ -41,6 +43,7 @@ function render(parent = document.getElementById("root")) {
     toggler.call(store),
     inputForm.call(store),
     stats.call(store),
+    cards.call(store),
   );
 
   parent.replaceChildren(
