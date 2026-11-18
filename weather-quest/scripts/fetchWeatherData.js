@@ -1,9 +1,10 @@
 export function FetchWeatherData(query) {
   const t = this;
-  const uri = `https://api.openweathermap.org/data/2.5/${t.state.isWeekly ? "forecast" : "weather"}?appid=28bcf38c60e275fdc4ec350975c54696&${query}`;
+  const uri = `https://api.openweathermap.org/data/2.5/${t.state.isWeekly ? "forecast" : "weather"}?appid=28bcf38c60e275fdc4ec350975c54696&units=metric&${query}`;
   fetch(uri)
     .then((res) => res.json())
     .then((resData) => {
+      console.log(resData);
       if (!t.state.isWeekly) {
         const {
           name,
@@ -11,8 +12,22 @@ export function FetchWeatherData(query) {
           coord: { lat, lon },
           wind: { speed },
           main: { humidity, pressure, temp },
+          weather: [{ icon }],
         } = resData;
-        console.log(name, country, lat, lon, humidity, speed, pressure);
+
+        // Get the Current Date
+        const dt = new Date();
+        const intlOpts = {
+          day: "2-digit",
+          month: "short",
+          hour12: false,
+        };
+        const formatter = new Intl.DateTimeFormat("en-IN", intlOpts);
+        const date = formatter
+          .formatToParts(dt)
+          .map(({ value }) => value.toUpperCase())
+          .join("");
+
         t.state = structuredClone({
           isWeekly: t.state.isWeekly,
           body: structuredClone({
@@ -24,6 +39,8 @@ export function FetchWeatherData(query) {
             speed,
             pressure,
             temp,
+            icon,
+            date,
           }),
         });
       } else {

@@ -93,16 +93,22 @@ body {
 
 #root {
   color: var(--home-tertiary);
-  background: var(--home-card-bg);
   border-radius: 12px;
   padding: 64px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  max-width: var(--container-sz);
-  row-gap: 24px;
+  /* text-align: center; */
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 24px;
 }
 
-#root h1 {
-  font-size: 48px;
+.mainwrapper,
+.resultwrapper {
+  width: calc(var(--container-sz));
+  background: var(--home-card-bg);
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.resultwrapper .cards-section {
+  display: flex;
 }
