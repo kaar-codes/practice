@@ -103,9 +103,7 @@ export function FetchWeatherData(query) {
           }
         }
 
-        const { date, pressure, speed, humidity, temp, icon } = records.at(
-          t.record ?? 0,
-        );
+        const { date, pressure, speed, humidity, temp, icon } = records.at(0);
 
         t.state = structuredClone({
           isWeekly: t.state.isWeekly,
